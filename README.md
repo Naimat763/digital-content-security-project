@@ -1,14 +1,36 @@
 # Digital Content Security Project
 
-This project demonstrates how to secure digital content using encryption and hashing.
+## Overview
+This project demonstrates how digital content can be protected using encryption and integrity techniques.
 
 ## Tools Used
-- SHA-256
-- GPG
-- OpenSSL
+- SHA-256 (Integrity checking)
+- GPG (Encryption)
+- OpenSSL (Optional encryption)
 
-## Demo
-Screenshots and files are uploaded in this repository.
+## Demo Steps
+
+1. Create a file:
+echo "This is secure content" > demo.txt
+
+2. Generate hash:
+sha256sum demo.txt
+
+3. Modify file:
+echo "modified" >> demo.txt
+
+4. Generate hash again:
+sha256sum demo.txt
+
+5. Encrypt file:
+gpg -c demo.txt
+
+6. Decrypt file:
+gpg demo.txt.gpg
+
+## Purpose
+To demonstrate how digital content can be secured and protected from unauthorized access.
+
 
 ## Author
 Naimat Ullah
